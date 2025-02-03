@@ -26,16 +26,15 @@ export default function actioncard() {
                     </Text>
                 </View>
                 <View style={styles.footerConatiner}>
-                    <TouchableOpacity
-                    onPress={() => openWebsite('https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript')}
-                    >   
+                    <TouchableOpacity style={styles.sociallinks}
+                        onPress={() => openWebsite('https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript')}
+                    >
                         <Text>Read More</Text>
                     </TouchableOpacity>
-                </View>
-                <View style={styles.footerConatiner}>
-                    <TouchableOpacity
-                    onPress={() => openWebsite('https://www.instagram.com/_.manas.raj._/')}
-                    >   
+
+                    <TouchableOpacity style={styles.sociallinks}
+                        onPress={() => openWebsite('https://www.instagram.com/_.manas.raj._/')}
+                    >
                         <Text>follow me</Text>
                     </TouchableOpacity>
                 </View>
@@ -46,18 +45,58 @@ export default function actioncard() {
 
 const styles = StyleSheet.create({
     headingText: {
-        fontSize: 20,
+        fontSize: 24,
         fontWeight: 'bold',
         color: '#333333',
         paddingHorizontal: 8
     },
-    card: {},
-    elevatedCard: {},
-    headingcontainer: {},
-    headertext: {},
+    card: {
+        width: 350,
+        height: 340,
+        borderRadius: 6,
+        marginVertical: 12,
+        marginHorizontal: 16,
+    },
+    elevatedCard: {
+        backgroundColor: '#E07C24',
+        elevation: 4,
+        shadowOffset: {
+            width: 1,
+            height: 1
+        },
+        shadowColor: '#333',
+        shadowOpacity: 0.4,
+        shadowRadius: 2,
+    },
+    headingcontainer: {
+        height: 40,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    headertext: {
+        color: '#FFFFFF',
+        fontSize: 16,
+        fontWeight: '600',
+    },
     cardImage: {
         height: 180
     },
-    bodyConatiner: {},
-    footerConatiner: {},
+    bodyConatiner: {
+        padding: 8,
+    },
+    footerConatiner: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
+        padding: 8,
+    },
+    sociallinks: {
+        backgroundColor: '#FFFFFF',
+        paddingHorizontal: 28,
+        paddingVertical: 6,
+        borderRadius: 6,
+        borderWidth: 1,
+        borderColor: '#333',
+    }
 })
